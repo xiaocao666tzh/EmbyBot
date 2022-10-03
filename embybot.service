@@ -1,0 +1,18 @@
+[Unit]
+Description=Embybot
+After=network.target
+After=mysqld.service
+Wants=network.target
+
+[Service]
+WorkingDirectory=/PathToEmbybot
+ExecStart=python3 /PathToEmbybot/embybot.py
+Restart=on-abnormal
+RestartSec=5s
+KillMode=mixed
+
+StandardOutput=null
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
