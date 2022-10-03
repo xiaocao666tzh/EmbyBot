@@ -670,7 +670,7 @@ async def my_handler(client, message):
         text = text.split(' ')
         url = text[1]
         name = text[2]
-        if url.find('imdb.com') == -1 or url.find('ref') != -1 or url.find('title') == -1
+        if url.find('imdb.com') == -1 or url.find('ref') != -1 or url.find('title') == -1:
             await message.reply('链接不符合规范')
         else:
             await message.reply('已发送请求')
