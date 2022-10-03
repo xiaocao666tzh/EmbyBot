@@ -77,7 +77,7 @@ PathToEmbybot 改为文件路径
 `systemctl enable embybot`
 停止bot
 `systemctl stop embybot`
-##使用
+## 使用
 发送/start 获取帮助
 ## 注意
 写数据库的时候忘记写完关闭连接了，因此需要设置一个cron任务，每八小时内必须重启一次bot，否则bot会报错！
