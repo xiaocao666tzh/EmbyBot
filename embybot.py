@@ -665,7 +665,7 @@ async def my_handler(client, message):
             else:
                 await message.reply('无Emby账号无法查看线路')
         else:
-            await message.reply('请勿在群组中只用此命令')
+            await message.reply('请勿在群组中使用此命令')
     elif text.find('/求片') == 0:
         text = text.split(' ')
         url = text[1]
