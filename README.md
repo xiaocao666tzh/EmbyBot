@@ -64,19 +64,19 @@ https://github.com/xiaocao666tzh/EmbyBot/blob/main/embybot.sql.gz
 前台启动机器人        python3 embybot.py
 后台启动机器人        nohup python3 embybot.py > botlog.log 2>&1 &
 ## 添加进程守护（可选，但强烈建议）
-在 /usr/lib/systemd/system 下创建如下文件
-https://github.com/xiaocao666tzh/EmbyBot/blob/main/embybot.service
-PathToEmbybot 改为文件路径
-执行命令
-`systemctl daemon-reload`
-启动bot
-`systemctl start embybot`
-重启bot
-`systemctl restart embybot`
-开机自启
-`systemctl enable embybot`
-停止bot
-`systemctl stop embybot`
+在 /usr/lib/systemd/system 下创建如下文件  
+https://github.com/xiaocao666tzh/EmbyBot/blob/main/embybot.service  
+PathToEmbybot 改为文件路径  
+执行命令  
+`systemctl daemon-reload`  
+启动bot  
+`systemctl start embybot`  
+重启bot  
+`systemctl restart embybot`  
+开机自启  
+`systemctl enable embybot`  
+停止bot  
+`systemctl stop embybot`  
 ## 使用
 发送/start 获取帮助
 ## 注意
