@@ -530,6 +530,14 @@ def write_conofig(config='',parms=''):
     conn.commit()
     return 'OK'
 
+def ItemsCount():
+    r = requests.get(f'{embyurl}/Items/Counts?api_key={embyapi}').text
+    r= json.loads(r)
+    MovieCount = r['MovieCount']
+    SeriesCount = r['SeriesCount']
+    EpisodeCount = r['EpisodeCount']
+    return MovieCount,SeriesCount,EpisodeCount
+
 
 
 @app.on_message(filters.text)
@@ -622,7 +630,7 @@ async def my_handler(client, message):
             elif re[0] == 'NotHaveAnEmby':
                 await message.reply(f'此用户没有emby账号，可注册：{re[1]}')
     elif str(text) == '/help' or str(text) == '/start' or text == f'/start{bot_name}' or text == f'/help{bot_name}':
-        await message.reply('用户命令：\n/invite + 邀请码 使用邀请码获取创建账号资格\n/create + 用户名 创建用户（用户名不可包含空格）\n/info 查看用户信息（仅可查看自己的信息）\n/line 查看线路\n/help 输出'
+        await message.reply('用户命令：\n/invite + 邀请码 使用邀请码获取创建账号资格\n/create + 用户名 创建用户（用户名不可包含空格）\n/info 查看用户信息（仅可查看自己的信息）\n/line 查看线路\n/count 查看服务器内片子数量\n/help 输出'
                             '本帮助\n管理命令：\n/new_code 创建新的邀请码 \n/register_all_time + 时间（分）开放注册，时长为指定时间\n/register_all_user + 人数 开放指定数量的注册名额\n/info 回复一位用户，查看他的信息\n/ban_emby 禁用一位用户的Emby账号\n/unban_emby 解禁一位用户的Emby账户')
     elif str(text).find('/register_all_user') == 0:
         re = await register_all_user(tgid=tgid, message=text)
@@ -675,6 +683,9 @@ async def my_handler(client, message):
         else:
             await message.reply('已发送请求')
             await app.send_message(chat_id=ban_channel_id,text=f'#求片\n影片名 #{name}\nIMDB链接：<code>{url}</code>\nTGID <a href="tg://user?id={tgid}">{tgid}</a>')
+    elif text == '/count' or text == f'/count{bot_name}':
+        re = ItemsCount()
+        await message.reply(f'🎬电影数量：{re[0]}\n📽️剧集数量：{re[1]}\n🎞️总集数：{re[2]}')
 
 
 app.run()
