@@ -82,7 +82,8 @@ PathToEmbybot 改为文件路径
 ## 注意
 写数据库的时候忘记写完关闭连接了，因此需要设置一个cron任务，每八小时内必须重启一次bot，否则bot会报错！
 ## 参考
-https://github.com/MisakaF0406/MisakaF_Emby
+[https://github.com/MisakaF0406/MisakaF_Emby
+](https://github.com/MisakaFxxk/MisakaF_Emby)  
 ## 鸣谢
 东东，Misakaf等Emby大佬提供技术支持
 Foxcoo 帮我撰写了部分的README
