@@ -10,23 +10,7 @@ import time
 import uuid
 import random
 from datetime import datetime, timedelta
-
-
-
-bot_token = "xxx"
-db_user = 'xxx'
-db_password = 'xxx'
-db_name = 'xxx'
-bot_name = '@xxx'
-api_id = 99999999
-api_hash = "xxx"
-embyurl = 'xxx'
-embyapi = 'xxx'
-groupid = -100
-channelid = -100
-admin_list = [111]
-ban_channel_id = -100
-line = 'xxx'  # config
+from config import *
 
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)  # create tg bot
