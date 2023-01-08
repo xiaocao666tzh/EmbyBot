@@ -1,15 +1,19 @@
 # Emby服管理bot by小草
 ## 食用教程
 ### 将项目克隆到本地
-`git clone https://github.com/xiaocao666tzh/EmbyBot.git && cd EmbyBot && pip3 install -r requirements.txt`
+```bash
+git clone https://github.com/xiaocao666tzh/EmbyBot.git && cd EmbyBot && pip3 install -r requirements.txt
+```
 
 
 
 
-### 修改配置文件
+### 修改配置文件 config.py.example并重命名为config.py
 
 ```
 bot_token = "xxx"            您的机器人令牌。从@BotFather获取
+db_host = 'localhost'        mysql数据库地址
+db_port = 3306               数据库端口
 db_user = 'xxx'              数据库用户
 db_password = 'xxx'          数据库密码
 db_name = 'xxx'              数据库名称

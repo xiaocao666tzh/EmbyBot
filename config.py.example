@@ -1,0 +1,16 @@
+bot_token = "xxx"
+db_host = 'localhost'
+db_port = 3306
+db_user = 'root'
+db_password = 'root'
+db_name = 'embybot'
+bot_name = '@xxx'
+api_id = 99999999
+api_hash = "xxx"
+embyurl = 'xxx'
+embyapi = 'xxx'
+groupid = -100
+channelid = -100
+admin_list = [111]
+ban_channel_id = -100
+line = 'xxx'  # config
