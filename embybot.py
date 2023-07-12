@@ -588,7 +588,7 @@ async def my_handler(client, message):
                 elif re == 'D':
                     await message.reply('该用户名已被使用')
                 else:
-                    await message.reply(f'创建成功，账号<code>{re[0]}</code>，初始密码为<code>{re[1]}</code>，密码不进行保存，请尽快登陆修改密码')
+                    await message.reply(f'创建成功，账号<code>{re[0]}</code>，初始密码为<code>{re[1]}</code>，密码不进行保存，请尽快登录修改密码')
             else:
                 await message.reply('请勿在群组使用该命令')
     elif str(text).find('/register_all_time') == 0:
