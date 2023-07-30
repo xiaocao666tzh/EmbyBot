@@ -457,7 +457,7 @@ async def create_user(tgid=0, message=''):
         pd_user = pd_read_sql_query('select * from user;')
         if hadname(tgid=tgid) == 'B':
             return 'A'  # already have an account
-        message = message.split(' ')
+        message = message.split(' ',1)
         name = message[-1]
         if name == '' or name == ' ':
             return 'B'  # do not input a name
@@ -669,7 +669,7 @@ async def my_handler(client, message):
         else:
             await message.reply('请勿在群组中使用此命令')
     elif text.find('/求片') == 0:
-        text = text.split(' ')
+        text = text.split(' ',1)
         url = text[1]
         name = text[2]
         if url.find('imdb.com') == -1 or url.find('ref') != -1 or url.find('title') == -1:
